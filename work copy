@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <link href="css/app.css?id=3597d21ce6c4748ef0588137a68b7e30" rel="stylesheet">
+
+    <link href="/img/favicon-32x32.png" rel="icon" sizes="32x32">
+    <link href="/img/favicon-192x192.png" rel="icon" sizes="192x192">
+    <link href="/img/favicon-297x297.png" rel="apple-touch-icon-precomposed">
+    <meta content="/img/favicon-297x297.png" name="msapplication-TileImage">
+
+    <title>
+   JCGT || Developer
+
+    </title>
+
+    <meta name="description" content="Client projects and other professional work.">
+    <meta name="google-site-verification" content="bzTP6T7_iPqdsTPB1KIMbC5z7GXwvXKbcedNpY">
+    <style>
+        .gambar{
+            height: 30%;
+            width: 150px;
+            border-radius: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+    <div class="header__section header__section--media">
+        <a href="#">
+            <picture>
+                <img width="100" height="100" src="./1.jpeg" >
+            </picture>
+        </a>
+    </div>
+
+    <div class="header__section header__section--menu">
+        <a class="logo" href="#">
+    JCGT web Developer
+        </a>
+
+        <nav class="menu">
+            <a class="menu__item active" href="#">
+                Sertifikasi
+            </a>
+            <a class="menu__item "
+                href="#jurnal" >
+                 Aplikasi
+            </a>
+            <a class="menu__item "
+                href="#">
+                Artikel
+            </a>
+            <a class="menu__item "
+                href="#">
+                Kontak Kami
+            </a>
+        </nav>
+    </div>
+</header>
+
+            <div class="mb-large">
+        <h1 class="mb-tiny">
+        Aplikasi
+        </h1>
+                    <p class="txt-large">
+               Aplikasi Jurnal Pelatihan Keberan Alkitab (PKA) adalah aplikasi <br> berbasis website.
+            </p>
+            </div>
+
+    <section class="page-wide">
+                                    <div class="project-preview">
+                    <figure class="project-preview__media">
+                        <a href="#">
+                            <img src="siap.png" class="gambar">
+                        </a>
+                    </figure>
+
+                    <div class="project-preview__content">
+                        <h2 class="project-preview__title">
+                            <a href="#" >
+                              Aplikasi Jurnal PKA
+                            </a>
+                        </h2>
+
+                        <p class="project-preview__desc">
+                           Jurnal pelatihan kebenaran alkitab  (PKA) <br>adalah aplikasi yang bertujuan untuk mengetahui progres kemarjuan Siswa, selama mereka berlatih di Lawang atau di Pelatihan Kebenaran Alkitab.
+                        </p>
+
+                                                    <!-- <div class="project-preview__meta">
+                                <ul class="list list--regular">
+                                                                            <li class="list__item">
+                                            Logo Design
+                                        </li>
+                                                                            <li class="list__item">
+                                            Web Design
+                                        </li>
+                                                                            <li class="list__item">
+                                            Static Site Development
+                                        </li>
+                                                                    </ul>
+                            </div> -->
+
+                        <div class="project-preview__action">
+                            <a href="#" class="btn">
+                                Lihat Aplikasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                        </section>
+    <section class="page-wide">
+                                    <div class="project-preview">
+                    <figure class="project-preview__media">
+                        <a href="#">
+                            <img src="siap.png" class="gambar">
+                        </a>
+                    </figure>
+
+                    <div class="project-preview__content">
+                        <h2 class="project-preview__title">
+                            <a href="#" >
+                              Aplikasi Jurnal PKA
+                            </a>
+                        </h2>
+
+                        <p class="project-preview__desc">
+                           Jurnal pelatihan kebenaran alkitab  (PKA) <br>adalah aplikasi yang bertujuan untuk mengetahui progres kemarjuan Siswa, selama mereka berlatih di Lawang atau di Pelatihan Kebenaran Alkitab.
+                        </p>
+
+                                                    <!-- <div class="project-preview__meta">
+                                <ul class="list list--regular">
+                                                                            <li class="list__item">
+                                            Logo Design
+                                        </li>
+                                                                            <li class="list__item">
+                                            Web Design
+                                        </li>
+                                                                            <li class="list__item">
+                                            Static Site Development
+                                        </li>
+                                                                    </ul>
+                            </div> -->
+
+                        <div class="project-preview__action">
+                            <a href="#" class="btn">
+                                Lihat Aplikasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                        </section>
+    <section class="page-wide">
+                                    <div class="project-preview">
+                    <figure class="project-preview__media">
+                        <a href="#">
+                            <img src="siap.png" class="gambar">
+                        </a>
+                    </figure>
+
+                    <div class="project-preview__content">
+                        <h2 class="project-preview__title">
+                            <a href="#" >
+                              Aplikasi Jurnal PKA
+                            </a>
+                        </h2>
+
+                        <p class="project-preview__desc">
+                           Jurnal pelatihan kebenaran alkitab  (PKA) <br>adalah aplikasi yang bertujuan untuk mengetahui progres kemarjuan Siswa, selama mereka berlatih di Lawang atau di Pelatihan Kebenaran Alkitab.
+                        </p>
+
+                                                    <!-- <div class="project-preview__meta">
+                                <ul class="list list--regular">
+                                                                            <li class="list__item">
+                                            Logo Design
+                                        </li>
+                                                                            <li class="list__item">
+                                            Web Design
+                                        </li>
+                                                                            <li class="list__item">
+                                            Static Site Development
+                                        </li>
+                                                                    </ul>
+                            </div> -->
+
+                        <div class="project-preview__action">
+                            <a href="#" class="btn">
+                                Lihat Aplikasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                        </section>
+    <section class="page-wide">
+                                    <div class="project-preview">
+                    <figure class="project-preview__media">
+                        <a href="#">
+                            <img src="siap.png" class="gambar">
+                        </a>
+                    </figure>
+
+                    <div class="project-preview__content">
+                        <h2 class="project-preview__title">
+                            <a href="#" id="jurnal">
+                              Aplikasi Jurnal PKA
+                            </a>
+                        </h2>
+
+                        <p class="project-preview__desc">
+                           Jurnal pelatihan kebenaran alkitab  (PKA) <br>adalah aplikasi yang bertujuan untuk mengetahui progres kemarjuan Siswa, selama mereka berlatih di Lawang atau di Pelatihan Kebenaran Alkitab.
+                        </p>
+
+                                                    <!-- <div class="project-preview__meta">
+                                <ul class="list list--regular">
+                                                                            <li class="list__item">
+                                            Logo Design
+                                        </li>
+                                                                            <li class="list__item">
+                                            Web Design
+                                        </li>
+                                                                            <li class="list__item">
+                                            Static Site Development
+                                        </li>
+                                                                    </ul>
+                            </div> -->
+
+                        <div class="project-preview__action">
+                            <a href="#" class="btn">
+                                Lihat Aplikasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                        </section>
+
+        <footer class="footer">
+    <div class="footer__inner">
+        <p class="footer__text">
+            &copy; 2022 JCGT || Web Developer.
+        </p>
+    </div>
+</footer>
+    </div>
+    </body>
+
+</html>
