@@ -1,7 +1,7 @@
 <?php
+$id = $_GET['id'];
 include 'database.php';
-
-$artikel = mysqli_query($conn, "SELECT * FROM artikel where status='Aktif' ");
+$artikel = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM artikel where status='Aktif' and id='$id' "));
 
 ?>
 
@@ -83,43 +83,24 @@ include 'head.php';
                 <div class="grid__column grid__column--8">
                     <div class="mb-large">
                         <h1 class="mb-tiny">
-                            Artikel
+                            <?= $artikel['judul']; ?>
                         </h1>
-                        <p class="txt-large">
-                            My thoughts on web development and a look at my personal life.
+                        <p class="mb-medium txt-fade">
+                            <!-- <a class="tag" href="https://sebkay.com/articles/category/wordpress" style="border-color: #0073AA; color: #0073AA;">
+                                WordPress
+                            </a> -->
+                            <br>
+                            <?= $artikel['date']; ?>
+                            /
+                            3 minute read
                         </p>
+                        <p class="txt-large">
+                            <?= $artikel['konten']; ?>
+                        </p>
+
+
                     </div>
-                    <?php
-                    while ($data = mysqli_fetch_array($artikel)) { ?>
-                        <article class="post-preview">
-                            <h3 class="post-preview__title">
-                                <b>
-                                    <?= $data['judul']; ?>
-                                </b>
-                            </h3>
-                            <p class="post-preview__meta">
-                                <a class="tag" href="https://sebkay.com/articles/category/wordpress" style="border-color: #0073AA; color: #0073AA;">
-                                    WordPress
-                                </a>
-                                <br>
-                                <?= $data['date']; ?>
-                                /
-                                3 minute read
-                            </p>
-                            <div class="post-preview__excerpt">
-                                <?= $data['konten']; ?>
-                            </div>
-                            <p class="post-preview__action">
-                                <a href="Detail.php?id=<?= $data['id']; ?>">
-                                    Baca Selengkapnya→
-                                </a>
-                            </p>
-                        </article>
-
-                    <?php }
-                    ?>
                 </div>
-
 
 
             </div>

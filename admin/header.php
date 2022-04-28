@@ -129,7 +129,7 @@
             echo 'active';
           } ?> stylefont">Proyek</a>
       </li>
-      <li class="nav-item"><a href="#" class="nav-link stylefont">Pesan</a></li>
-      <li class="nav-item"><a href="#" class="nav-link stylefont">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link stylefont">Pesan Email</a></li>
+      <li class="nav-item"><a href="../logout.php" class="nav-link stylefont">Keluar</a></li>
     </ul>
   </header>

@@ -19,6 +19,10 @@
             text-decoration: none;
         }
 
+        .menu__item {
+            font-weight: 800;
+        }
+
         a {
             font-weight: 700;
             text-decoration: none;
