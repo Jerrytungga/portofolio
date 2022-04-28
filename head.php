@@ -20,7 +20,8 @@
         }
 
         .menu__item {
-            font-weight: 800;
+
+            font-weight: bold;
         }
 
         a {
@@ -32,12 +33,50 @@
             background-color: #F1F8FA;
         }
 
+        .mobile {
+            width: 320px;
+            line-height: 1.3;
+            font-size: large;
+            color: #000;
+            text-transform: uppercase;
+            font-size: 24px;
+
+
+        }
+
         @media screen and (max-width: 576px) {
             .mobile {
                 width: 320px;
-                margin-left: 5px;
                 line-height: 1.3;
+                font-size: large;
+                color: #000;
+                text-transform: uppercase;
+                font-size: 24px;
+                text-align: center;
+                margin-left: 65px;
 
             }
+
+            .mobile:hover {
+                color: #000;
+
+            }
+
+            .gambar {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: #000;
+            }
+
+
+
+            .logo__text {
+                font-size: 1.5rem;
+            }
+
+
+
+
         }
     </style>
