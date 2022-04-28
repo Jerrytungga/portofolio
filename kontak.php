@@ -1,23 +1,3 @@
-<?php
-include 'database.php';
-if (isset($_POST['sent'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $pesan = $_POST['message'];
-
-    $mailto = "jerrychristian@flats.id";
-    $headers = "From: " . $email;
-    $text = " Hai Jerry Christian, Anda mendapatkan pesan email dari " . $name . ".\n\n" . $pesan;
-    mail($mailto, $subject, $text, $headers);
-    header('location: kontak.php');
-}
-
-
-
-?>
-
-
 <!doctype html>
 <html lang="en">
 <?php
@@ -38,7 +18,7 @@ include 'head.php';
 
             <div class="mt-large">
 
-                <form action="" method="post">
+                <form action="email.php" method="post">
                     <div class="form__row">
                         <div class="form__field">
                             <label for="name" class="form__label">
