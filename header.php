@@ -2,14 +2,14 @@
    <div class="header__section header__section--media">
      <a href="#">
        <picture>
-         <img width="100" height="100" src="image/1.jpeg">
+         <img width="100" height="100" src="image/2.jpeg">
        </picture>
      </a>
    </div>
 
    <div class="header__section header__section--menu">
      <a class="logo mobile" href="index.php">
-       Web Proggraming solotech
+       Jerry Christian
      </a>
      <nav class="menu">
        <a class="menu__item" href="sertifikasi.php">

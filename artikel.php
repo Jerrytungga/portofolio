@@ -1,3 +1,10 @@
+<?php
+include 'database.php';
+
+$artikel = mysqli_query($conn, "SELECT * FROM artikel where status='Aktif' ");
+
+?>
+
 <!doctype html>
 <html lang="en">
 <?php
@@ -76,61 +83,48 @@ include 'head.php';
                 <div class="grid__column grid__column--8">
                     <div class="mb-large">
                         <h1 class="mb-tiny">
-                            Articles
+                            Artikel
                         </h1>
                         <p class="txt-large">
                             My thoughts on web development and a look at my personal life.
                         </p>
                     </div>
-                    <article class="post-preview">
-                        <h3 class="post-preview__title">
-                            <a href="https://sebkay.com/articles/writing-wordpress-unit-tests-touchstone">
-                                Touchstone – WordPress Unit &amp; Integration Tests
-                            </a>
-                        </h3>
+                    <?php
+                    while ($data = mysqli_fetch_array($artikel)) { ?>
+                        <article class="post-preview">
+                            <h3 class="post-preview__title">
+                                <b>
+                                    <?= $data['judul']; ?>
+                                </b>
+                            </h3>
+                            <p class="post-preview__meta">
+                                <a class="tag" href="https://sebkay.com/articles/category/wordpress" style="border-color: #0073AA; color: #0073AA;">
+                                    WordPress
+                                </a>
+                                <br>
+                                <?= $data['date']; ?>
+                                /
+                                3 minute read
+                            </p>
+                            <div class="post-preview__excerpt">
+                                <?= $data['konten']; ?>
+                            </div>
+                            <p class="post-preview__action">
+                                <a href="#">
+                                    Baca Selengkapnya→
+                                </a>
+                            </p>
+                        </article>
+
+                    <?php }
+                    ?>
                 </div>
 
 
 
             </div>
         </section>
-        <!-- <div class="mb-large">
-            <h1 class="mb-tiny">Aplikasi</h1>
-            <p class="txt-large">Berbasis Website</p>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body shadow">
-                        <center>
-                            <div class="col-md-4">
-                                <img src="image/jurnalpka.png" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Aplikasi jurnal pka</p>
-                            </div>
-                            <a href="#" class="btn btn-primary">Lihat Aplikasi</a>
-                        </center>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body shadow">
-                        <center>
-                            <div class="col-md-4">
-                                <img src="image/siapangkut.png" class="img-fluid rounded-start gambar" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Aplikasi Siapangkut</p>
-                            </div>
-                            <a href="./work copy" class="btn btn-primary">Lihat Aplikasi</a>
-                        </center>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <?php
         include 'footer.php';
         ?>
