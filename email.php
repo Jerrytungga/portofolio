@@ -5,7 +5,7 @@ if (isset($_POST['sent'])) {
   $subject = $_POST['subject'];
   $pesan = $_POST['message'];
 
-  $mailto = "jerrychristian@flats.id";
+  $mailto = "jerrychristiangedeontungga41@gmail.com";
   $headers = "From: " . $email;
   $text = " Hai Jerry Christian, Anda mendapatkan pesan email dari " . $name . ".\n\n" . $pesan;
   mail($mailto, $subject, $text, $headers);
