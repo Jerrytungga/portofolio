@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteEngine On
+RewriteCond $1 !^(index\.php)
+RewriteRule ^view/([^/\.]+)/?$ index.php?type=view&id=$1 [L]
+</IfModule>

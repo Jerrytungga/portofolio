@@ -13,7 +13,7 @@ if (!isset($_SESSION['role'])) {
 <html lang="en">
 
 <head>
-	<title>Login V6</title>
+	<title>Login || Jerry Christian</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -82,32 +82,25 @@ if (!isset($_SESSION['role'])) {
 		<form action="" method="POST">
 			<h1 class="h3 mb-3 fw-normal mb-5">Welcome</h1>
 			<img src="image/p4.png" class="mb-3" width="200" height="200">
-
 			<label for="username" class="visually-hidden">Username</label>
 			<input type="text" id="username" class="form-control my-2" placeholder="Username" autocomplete="off">
 			<label for="password" class="visually-hidden ">Password</label>
 			<input type="password" id="password" class="form-control mt-md-2" placeholder="Password">
-
-			<button class="w-100 btn btn-lg btn-primary btn-login" type="submit">Login</button>
+			<button class="w-100 btn btn-lg btn-dark btn-login mb-1" type="submit">Login</button>
+			<a href="index.php">Kembali</a>
 			<p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
 		</form>
 	</main>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 	<script>
 		$(document).ready(function() {
-
-			// Membuat function login_proses
 			function login_proses() {
 				var username = $("#username").val();
 				var password = $("#password").val();
-
-				// Mengecek username di isi atau tidak
 				if (username.length == "") {
-
-
-					alert('Username Kosong')
+					alert('Username harus di isi!')
+				} else if (password.length == "") {
+					alert('Password harus di isi!')
 				}
 
 				$.ajax({
@@ -118,27 +111,19 @@ if (!isset($_SESSION['role'])) {
 						"username": username,
 						"password": password
 					},
-					// Jika response nya sukses atau berhasil maka fungsi ini akan berjalan
 					success: function(response) {
 						// Jika ia sebagai admin
 						if (response == "Admin") {
-
-							Swal.fire(
-								'Good job!',
-								'You clicked the button!',
-								'success'
-							)
-
+							alert('Anda Berhasil Login!')
 							setTimeout(function() {
 								window.location.href = "admin/index.php";
 							}, 3000);
-
-
+						} else {
+							alert('Username atau passwors anda salah!')
 						}
 					}
 				});
 			}
-			// jika button yang class nya btn-login di click maka akan menjalan kan fungsi login_proses
 			$(".btn-login").click(function() {
 				login_proses();
 			});

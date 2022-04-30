@@ -1,4 +1,5 @@
     <?php
+    $page = 'Sertifikasi';
     include 'database.php';
     ?>
     <!doctype html>
