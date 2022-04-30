@@ -1,4 +1,11 @@
 <?php
+session_start();
+// jika sudah login ke mentor maka akan di teruskan ke halaman mentor
+if (!isset($_SESSION['role'])) {
+} else if ($_SESSION['role'] == "Admin") {
+  header("location:admin/index.php");
+}
+
 $page = 'Beranda';
 date_default_timezone_set('Asia/Jakarta');
 $hari_ini = date('d F Y');
