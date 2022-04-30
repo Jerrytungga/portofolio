@@ -13,11 +13,14 @@ if (isset($_POST['update'])) {
   $ktg = $_POST['keterangan'];
   $date = $_POST['tanggal'];
   $status = $_POST['pilihan'];
+  $singkat = $_POST['singkat'];
+  $hasil = $_POST['hasil'];
+  $situs = $_POST['situs'];
   if (move_uploaded_file($sumber, $target . $nama_gambar)) {
-    $T_proyek = mysqli_query($conn, "UPDATE `aplikasi` SET `gambar`='$nama_gambar',`Judul`='$judul',`keterangan`='$ktg',`date`='$date',`status`='$status' WHERE id_aplikasi='$id_proyek'");
+    $T_proyek = mysqli_query($conn, "UPDATE `aplikasi` SET `gambar`='$nama_gambar',`Judul`='$judul',`keterangan`='$ktg',`date`='$date',`status`='$status', `Keterangan_Singkat`='$singkat', `keterangan_Hasil`='$hasil',`link`='$situs' WHERE id_aplikasi='$id_proyek'");
     header('location: proyek.php');
   } else {
-    $T_proyek = mysqli_query($conn, "UPDATE `aplikasi` SET `Judul`='$judul',`keterangan`='$ktg',`date`='$date',`status`='$status' WHERE id_aplikasi='$id_proyek'");
+    $T_proyek = mysqli_query($conn, "UPDATE `aplikasi` SET `Judul`='$judul',`keterangan`='$ktg',`date`='$date',`status`='$status', `Keterangan_Singkat`='$singkat', `keterangan_Hasil`='$hasil',`link`='$situs' WHERE id_aplikasi='$id_proyek'");
     header('location: proyek.php');
   }
 }
@@ -51,13 +54,19 @@ $edit_proyek  = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `aplikasi`
               <div class="col-md-6">
                 <label for="Image">Gambar :</label><br>
                 <img src="images/proyek/<?= $edit_proyek['gambar']; ?>" width="300px" height="315px"><br><br>
-                <input type="file" class="form-control mt-5" name="gambar">
+                <input type="file" class="form-control mt-5" name="gambar"><br>
+                <label for="">Situs Website :</label>
+                <input type="text" name="situs" class="form-control mt-1" value="<?= $edit_proyek['link']; ?>"><br>
               </div>
               <div class="col-md-6">
                 <label for="judul">Judul :</label>
                 <input type="text" name="judul" value="<?= $edit_proyek['Judul']; ?>" class="form-control"> <br>
                 <label for="Keterangan">Keterangan :</label>
-                <textarea name="keterangan" id="" cols="30" rows="10" class="form-control"><?= $edit_proyek['keterangan']; ?></textarea><br>
+                <textarea name="keterangan" id="" cols="30" rows="5" class="form-control"><?= $edit_proyek['keterangan']; ?></textarea><br>
+                <label for="singkat">Uraian Singkat :</label>
+                <textarea name="singkat" id="" cols="30" rows="5" class="form-control"><?= $edit_proyek['Keterangan_Singkat']; ?></textarea><br>
+                <label for="hasil">Uraian Hasil :</label>
+                <textarea name="hasil" id="" cols="30" rows="5" class="form-control"><?= $edit_proyek['keterangan_Hasil']; ?></textarea><br>
                 <label for="tanggal">Tanggal :</label>
                 <input type="date" name="tanggal" class="form-control mt-1" value="<?= $edit_proyek['date']; ?>"><br>
                 <label for="status">Status :</label>

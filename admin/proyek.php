@@ -12,8 +12,11 @@ if (isset($_POST['Tambah_Proyek'])) {
   $ktg = $_POST['keterangan'];
   $date = $_POST['tanggal'];
   $status = $_POST['pilihan'];
+  $singkat = $_POST['Singkat'];
+  $hasil = $_POST['Hasil'];
+  $situs = $_POST['situs'];
   if (move_uploaded_file($sumber, $target . $nama_gambar)) {
-    $T_proyek = mysqli_query($conn, "INSERT INTO `aplikasi`(`gambar`, `Judul`, `keterangan`, `date`, `status`) VALUES ('$nama_gambar','$judul','$ktg','$date','$status')");
+    $T_proyek = mysqli_query($conn, "INSERT INTO `aplikasi`(`gambar`, `Judul`, `keterangan`, `date`, `status`,`Keterangan_Singkat`,`keterangan_Hasil`,`link`) VALUES ('$nama_gambar','$judul','$ktg','$date','$status','$singkat','$hasil','$situs')");
   }
 }
 ?>
@@ -79,7 +82,7 @@ if (isset($_POST['Tambah_Proyek'])) {
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header modalcolor">
           <h5 class="modal-title" id="exampleModalLabel">Tambah Proyek</h5>
@@ -100,7 +103,18 @@ if (isset($_POST['Tambah_Proyek'])) {
             <div class="row">
               <div class="col">
                 <label for="keterangan" class="mt-2">Keterangan :</label>
-                <textarea name="keterangan" id="" cols="30" rows="10" class="form-control mt-1"></textarea>
+                <textarea name="keterangan" id="" cols="30" rows="4" class="form-control mt-1"></textarea>
+              </div>
+              <div class="col">
+                <label for="keterangan" class="mt-2">Uraian Singkat:</label>
+                <textarea name="Singkat" id="" cols="30" rows="4" class="form-control mt-1"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label for="keterangan" class="mt-2">Uraian Hasil :</label>
+                <textarea name="Hasil" id="" cols="30" rows="4" class="form-control mt-1"></textarea>
               </div>
             </div>
 
@@ -115,6 +129,13 @@ if (isset($_POST['Tambah_Proyek'])) {
                   <option value="Aktif">Aktif</option>
                   <option value="Tidak Aktif">Tidak Aktif</option>
                 </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label for="keterangan" class="mt-2">Alamat Website :</label>
+                <input name="situs" class="form-control mt-1">
               </div>
             </div>
 

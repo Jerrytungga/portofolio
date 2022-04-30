@@ -1,5 +1,4 @@
     <?php
-    $page = 'Sertifikasi';
     include 'database.php';
     ?>
     <!doctype html>
@@ -19,11 +18,11 @@
             </center>
             <div class="album py-5">
                 <div class="container">
-                    <?php
-                    $sertifikasi = mysqli_query($conn, "SELECT * FROM tb_sertifikasi ");
-                    while ($perulangan = mysqli_fetch_array($sertifikasi)) {
-                    ?>
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <?php
+                        $sertifikasi = mysqli_query($conn, "SELECT * FROM tb_sertifikasi  ");
+                        while ($perulangan = mysqli_fetch_array($sertifikasi)) {
+                        ?>
                             <div class="col">
                                 <div class="card shadow">
                                     <img src="image/sertifikasi/<?= $perulangan['gambar']; ?>" alt="">
@@ -34,14 +33,14 @@
                                     </div>
                                 </div>
                             </div>
+                        <?php
+                        }
+                        ?>
 
-
-                        </div>
-                    <?php
-                    }
-                    ?>
+                    </div>
                 </div>
             </div>
+
 
             <?php
 

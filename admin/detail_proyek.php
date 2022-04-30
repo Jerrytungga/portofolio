@@ -36,8 +36,13 @@ $edit_proyek  = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `aplikasi`
             </div>
             <div class="col-md-6">
               <h2 class="card-title fw-bold"><?= $edit_proyek['Judul']; ?></h2> <br>
+              <b>Keterangan :</b>
               <p class="card-text"><?= $edit_proyek['keterangan']; ?></p>
-              <a class="font"><?= $edit_proyek['date']; ?></a><br>
+              <b>Uraian Singkat :</b>
+              <p class="card-text"><?= $edit_proyek['Keterangan_Singkat']; ?></p>
+              <b>Uraian Hasil :</b>
+              <p class="card-text"><?= $edit_proyek['keterangan_Hasil']; ?></p>
+              <a class="font"><?= $edit_proyek['date']; ?> || Link : <?= $edit_proyek['link']; ?></a><br>
               <a href="proyek.php" class="btn btn-dark mt-2">Kembali</a>
             </div>
           </div>

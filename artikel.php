@@ -86,7 +86,7 @@ include 'head.php';
                             Artikel
                         </h1>
                         <p class="txt-large">
-                            My thoughts on web development and a look at my personal life.
+                            Artikel ini adalah berisi dari refrensi mengenai website yang telah saya pelajari setiap hari.
                         </p>
                     </div>
                     <?php
@@ -98,10 +98,10 @@ include 'head.php';
                                 </b>
                             </h3>
                             <p class="post-preview__meta">
-                                <a class="tag" href="https://sebkay.com/articles/category/wordpress" style="border-color: #0073AA; color: #0073AA;">
+                                <!-- <a class="tag" href="https://sebkay.com/articles/category/wordpress" style="border-color: #0073AA; color: #0073AA;">
                                     WordPress
-                                </a>
-                                <br>
+                                </a> -->
+
                                 <?= $data['date']; ?>
                                 /
                                 3 minute read
