@@ -1,6 +1,6 @@
 <?php
 include 'database.php';
-$sqli_aplikasi = mysqli_query($conn, "Select * from aplikasi ");
+$sqli_aplikasi = mysqli_query($conn, "Select * from aplikasi order by id_aplikasi DESC ");
 
 ?>
 <!doctype html>
