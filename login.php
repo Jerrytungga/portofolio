@@ -6,8 +6,6 @@ if (!isset($_SESSION['role'])) {
 	header("location:admin/index.php");
 }
 
-
-
 ?>
 
 
@@ -18,89 +16,83 @@ if (!isset($_SESSION['role'])) {
 	<title>Login V6</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="admin/css/iziToast.min.css">
-	<link href="admin/css/sweetalert2.min.css" rel="stylesheet">
-	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="admin/images/icons/favicon.ico" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/vendor/bootstrap/css/bootstrap.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/fonts/iconic/css/material-design-iconic-font.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/vendor/animate/animate.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/vendor/css-hamburgers/hamburgers.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/vendor/animsition/css/animsition.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/vendor/select2/select2.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/vendor/daterangepicker/daterangepicker.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="admin/css/util.css">
-	<link rel="stylesheet" type="text/css" href="admin/css/main.css">
-	<!--===============================================================================================-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+
+		body {
+			display: flex;
+			align-items: center;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			background-color: #f5f5f5;
+		}
+
+		.form-signin {
+			width: 100%;
+			max-width: 330px;
+			padding: 15px;
+			margin: auto;
+		}
+
+		.form-signin .checkbox {
+			font-weight: 400;
+		}
+
+		.form-signin .form-floating:focus-within {
+			z-index: 2;
+		}
+
+		.form-signin input[type="email"] {
+			margin-bottom: -1px;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		.form-signin input[type="password"] {
+			margin-bottom: 10px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
 </head>
 
-<body>
+<body class="text-center">
 
+	<main class="form-signin">
+		<form action="" method="POST">
+			<h1 class="h3 mb-3 fw-normal mb-5">Welcome</h1>
+			<img src="image/p4.png" class="mb-3" width="200" height="200">
 
-	<div class="container-login100">
-		<div class="wrap-login100 p-t-85 p-b-20">
+			<label for="username" class="visually-hidden">Username</label>
+			<input type="text" id="username" class="form-control my-2" placeholder="Username" autocomplete="off">
+			<label for="password" class="visually-hidden ">Password</label>
+			<input type="password" id="password" class="form-control mt-md-2" placeholder="Password">
 
-			<span class="login100-form-title p-b-70">
-				Welcome
-			</span>
-			<span class="login100-form-avatar">
-				<img src="image/p4.png" alt="AVATAR">
-			</span>
+			<button class="w-100 btn btn-lg btn-primary btn-login" type="submit">Login</button>
+			<p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+		</form>
+	</main>
 
-			<form action="" method="POST">
-
-
-				<div class="wrap-input100 m-t-85 m-b-35">
-					<input class="input100" id="username" type="text" name="username">
-					<span class="focus-input100" data-placeholder="Username"></span>
-				</div>
-
-				<div class="wrap-input100  m-b-50">
-					<input class="input100" id="password" type="password" name="password">
-					<span class="focus-input100" data-placeholder="Password"></span>
-				</div>
-
-				<div class="container-login100-form-btn">
-					<button type="submit" class="login100-form-btn btn-login">
-						Login
-					</button>
-				</div>
-			</form>
-		</div>
-	</div>
-
-
-
-	<div id="dropDownSelect1"></div>
-
-	<!--===============================================================================================-->
-	<script src="admin/vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="admin/vendor/animsition/js/animsition.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="admin/vendor/bootstrap/js/popper.js"></script>
-	<script src="admin/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="admin/vendor/select2/select2.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="admin/vendor/daterangepicker/moment.min.js"></script>
-	<script src="admin/vendor/daterangepicker/daterangepicker.js"></script>
-	<!--===============================================================================================-->
-	<script src="admin/vendor/countdowntime/countdowntime.js"></script>
-	<!--===============================================================================================-->
-	<script src="admin/js/main.js"></script>
-	<script type="text/javascript" src="admin/js/alert/iziToast.min.js"></script>
-	<script src="admin/js/sweetalert2.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 	<script>
@@ -111,87 +103,41 @@ if (!isset($_SESSION['role'])) {
 				var username = $("#username").val();
 				var password = $("#password").val();
 
-
 				// Mengecek username di isi atau tidak
 				if (username.length == "") {
 
-					Swal.fire({
-						icon: 'error',
-						title: 'Oops...',
-						text: 'Field Username wajib diisi!'
-					});
 
-					// Mengecek password di isi atau tidak
-				} else if (password.length == "") {
-
-					Swal.fire({
-						icon: 'error',
-						title: 'Oops...',
-						text: 'Field Password wajib diisi!'
-					});
-
-				} else {
-					// Jika semua form terisi maka ajax akan memulai memproses data
-					$.ajax({
-						url: "aksi.php", //Url untuk mengelolah data
-						type: "POST", //Method untuk mengelolah data
-						data: {
-							// Mengirimkan data ke URL
-							"username": username,
-							"password": password
-						},
-						// Jika response nya sukses atau berhasil maka fungsi ini akan berjalan
-						success: function(response) {
-							// Jika ia sebagai admin
-							if (response == "Admin") {
-
-								iziToast.success({
-									title: 'Selamat',
-									message: 'Anda berhasil login sebagai mentor, sebentar ya...',
-									position: 'topRight'
-								});
-								setTimeout(function() {
-									window.location.href = "admin/index.php";
-								}, 3000);
-
-								// Jika ia sebagai siswa
-							} else if (response == "Tidak Aktif") {
-								// Jika response nya error maka fungsi ini yang akan berjalan
-
-								Swal.fire({
-									icon: 'error',
-									title: 'Opps!',
-									text: 'Maaf Akun Anda Tidak Aktif'
-								});
-
-
-							} else {
-								// Jika response nya error maka fungsi ini yang akan berjalan
-								Swal.fire({
-									icon: 'error',
-									title: 'Opps!',
-									text: 'Username atau Password Anda Salah!'
-								});
-
-							}
-
-							console.log(response);
-						},
-						// Jika ajax nya error/bermasalah maka fungsi ini yang akan berjalan
-						error: function(response) {
-
-							Swal.fire({
-								icon: 'error',
-								title: 'Opps!',
-								text: 'Terjadi kesalahan pada server!'
-							});
-
-							console.log(response);
-						}
-					});
+					alert('Username Kosong')
 				}
-			}
 
+				$.ajax({
+					url: "aksi.php", //Url untuk mengelolah data
+					type: "POST", //Method untuk mengelolah data
+					data: {
+						// Mengirimkan data ke URL
+						"username": username,
+						"password": password
+					},
+					// Jika response nya sukses atau berhasil maka fungsi ini akan berjalan
+					success: function(response) {
+						// Jika ia sebagai admin
+						if (response == "Admin") {
+
+							Swal.fire(
+								'Good job!',
+								'You clicked the button!',
+								'success'
+							)
+
+							setTimeout(function() {
+								window.location.href = "admin/index.php";
+							}, 3000);
+
+
+						}
+					}
+				});
+			}
 			// jika button yang class nya btn-login di click maka akan menjalan kan fungsi login_proses
 			$(".btn-login").click(function() {
 				login_proses();
