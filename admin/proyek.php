@@ -1,9 +1,13 @@
 <?php
 session_start();
-// jika sudah login ke mentor maka akan di teruskan ke halaman mentor
 if (!isset($_SESSION['role'])) {
-} else if ($_SESSION['role'] == "Admin") {
-  header("location:admin/index.php");
+  echo "<script type='text/javascript'>
+  alert('Anda harus login terlebih dahulu!');
+  window.location = '../index.php'
+</script>";
+} else {
+  $id =
+    $_SESSION['role'] == "Admin";
 }
 $page = 'Proyek';
 date_default_timezone_set('Asia/Jakarta');
