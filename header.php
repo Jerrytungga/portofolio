@@ -2,7 +2,7 @@
    <div class="header__section header__section--media">
      <a href="#">
        <picture>
-         <img width="100" class="gambar" height="100" src="image/2.jpeg">
+         <img width="100" class="gambar" height="100" src="image/p4.png">
        </picture>
      </a>
    </div>
@@ -24,7 +24,7 @@
        <a class="menu__item " href="kontak.php">
          Kontak
        </a>
-       <a href="login.php" type="button" class="menu__item btn btn-light text-black mt-3">Login</a>
+       <a href="login.php" type="button" class="menu__item btn btn-light text-black shadow mt-3">Login</a>
      </nav>
    </div>
  </header>

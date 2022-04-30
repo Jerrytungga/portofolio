@@ -73,9 +73,18 @@ $TA = mysqli_fetch_array($artikel);
                       <tr>
                         <th><?= $i; ?></th>
                         <td><?= $row['judul']; ?></td>
-                        <td><?= $row['konten']; ?></td>
                         <td>
-                          <img src="images/artikel/<?= $row["gambar"]; ?>" width="90">
+                          <span class="d-inline-block text-truncate text-justify" style="max-width: 200px;">
+
+                            <?= $row['konten']; ?>
+                          </span>
+                        </td>
+                        <td>
+                          <?php
+                          $GMB = $row["gambar"];
+                          if ($GMB > 0) { ?>
+                            <img src="images/artikel/<?= $row["gambar"]; ?>" width="90">
+                          <?php } ?>
                         </td>
                         <td><?= $row['status']; ?></td>
                         <td><?= $row['date']; ?></td>

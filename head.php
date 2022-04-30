@@ -20,8 +20,11 @@
         }
 
         .menu__item {
-
             font-weight: bold;
+        }
+
+        .menu__item:hover {
+            color: #000;
         }
 
         a {
@@ -40,7 +43,10 @@
             color: #000;
             text-transform: uppercase;
             font-size: 24px;
+        }
 
+        .mobile:hover {
+            color: #000;
 
         }
 

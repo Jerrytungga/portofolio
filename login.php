@@ -54,26 +54,28 @@ if (!isset($_SESSION['role'])) {
 				Welcome
 			</span>
 			<span class="login100-form-avatar">
-				<img src="image/1.jpeg" alt="AVATAR">
+				<img src="image/p4.png" alt="AVATAR">
 			</span>
 
+			<form action="" method="POST">
 
-			<div class="wrap-input100 m-t-85 m-b-35">
-				<input class="input100" id="username" type="text" name="username">
-				<span class="focus-input100" data-placeholder="Username"></span>
-			</div>
 
-			<div class="wrap-input100  m-b-50">
-				<input class="input100" id="password" type="password" name="password">
-				<span class="focus-input100" data-placeholder="Password"></span>
-			</div>
+				<div class="wrap-input100 m-t-85 m-b-35">
+					<input class="input100" id="username" type="text" name="username">
+					<span class="focus-input100" data-placeholder="Username"></span>
+				</div>
 
-			<div class="container-login100-form-btn">
-				<button class="login100-form-btn btn-login">
-					Login
-				</button>
-			</div>
+				<div class="wrap-input100  m-b-50">
+					<input class="input100" id="password" type="password" name="password">
+					<span class="focus-input100" data-placeholder="Password"></span>
+				</div>
 
+				<div class="container-login100-form-btn">
+					<button type="submit" class="login100-form-btn btn-login">
+						Login
+					</button>
+				</div>
+			</form>
 		</div>
 	</div>
 
