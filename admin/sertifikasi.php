@@ -19,8 +19,9 @@ if (isset($_POST['kirim'])) {
   $target = '../image/sertifikasi/';
   $nama_gambar = $_FILES['gambar']['name'];
   $tanggal = $_POST['tanggal'];
+  $srt = $_POST['sertifikat'];
   if (move_uploaded_file($sumber, $target . $nama_gambar)) {
-    $datamasuk = mysqli_query($conn, "INSERT INTO `tb_sertifikasi`(`gambar`, `date`) VALUES ('$nama_gambar','$tanggal')");
+    $datamasuk = mysqli_query($conn, "INSERT INTO `tb_sertifikasi`(`gambar`, `date`,`name`) VALUES ('$nama_gambar','$tanggal','$srt')");
   }
 }
 $tb_sertifikasi = mysqli_query($conn, "SELECT * FROM `tb_sertifikasi` ");
@@ -56,8 +57,12 @@ $tb_sertifikasi = mysqli_query($conn, "SELECT * FROM `tb_sertifikasi` ");
                 <input type="file" name="gambar" class="form-control colom mt-1">
               </div>
               <div class="col">
-                <label for="">Tanggal :</label>
+                <label for="date">Tanggal :</label>
                 <input type="date" class="form-control colom" name="tanggal">
+              </div>
+              <div class="col">
+                <label for="Sertifikasi">Sertifikasi :</label>
+                <input type="sertifikasi" name="sertifikat" class="form-control colom">
               </div>
             </div>
             <button type="submit" name="kirim" class="btn btn-success mt-2">Submit</button>
@@ -67,6 +72,7 @@ $tb_sertifikasi = mysqli_query($conn, "SELECT * FROM `tb_sertifikasi` ");
               <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama File</th>
+                <th scope="col">Sertifikasi</th>
                 <th scope="col">Tanggal</th>
               </tr>
             </thead>
@@ -76,6 +82,7 @@ $tb_sertifikasi = mysqli_query($conn, "SELECT * FROM `tb_sertifikasi` ");
                 <tr>
                   <th scope="row"><?= $i; ?></th>
                   <td><?= $row['gambar']; ?></td>
+                  <td><?= $row['name']; ?></td>
                   <td><?= $row['date']; ?> &nbsp;<a href="modul/proses_hapus.php?sertifikasi=<?= $row['id']; ?>"><button class="btn btn-danger">Hapus File</button></a></td>
                 </tr>
                 <?php $i++; ?>
