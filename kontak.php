@@ -88,7 +88,8 @@ include 'head.php';
                     position: 'center',
                     icon: 'success',
                     title: '<?php echo $berhasil; ?>',
-                    text: '<h3>Pesan <?= $_POST['name']; ?> telah terkirim <br></h3><?= $waktu_sekarang; ?>',
+                    text: 'Pesan <?= $_POST['name']; ?> telah terkirim.',
+                    text: '<?= $waktu_sekarang; ?>',
                     showConfirmButton: true
                     // timer: 1500
                 })
