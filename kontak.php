@@ -4,13 +4,17 @@ if (isset($_POST['send'])) {
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $pesan = $_POST['message'];
-    $mailto = "From: kidungid2020@gmail.com";
-    if (mail($name, $email, $subject, $pesan, $mailto)) {
-        echo '<script>alert("Username atau passwors anda salah!")</script>';
-    }
+
+    $mailto = "jerrychristiangedeontungga41@gmail.com";
+    $headers = "From: " . $email;
+    $text = " Hai Jerry Christian, Anda mendapatkan pesan email dari " . $name . ".\n\n" . $pesan;
+    if (mail($mailto, $subject, $text, $headers)) { ?>
+        <div class="alert alert-success text-center">
+            <?php echo "Your mail successfully sent to $recipient" ?>
+        </div>
+<?php  }
 }
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -32,7 +36,7 @@ include 'head.php';
 
             <div class="mt-large">
 
-                <form action="" method="post">
+                <form action="kontak.php" method="post">
                     <div class="form__row">
                         <div class="form__field">
                             <label for="name" class="form__label">
