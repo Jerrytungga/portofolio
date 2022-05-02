@@ -13,8 +13,7 @@
             <?php
             include 'header.php';
             ?>
-            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-            <div class="elfsight-app-304a1211-7b9b-4250-938c-edf176107684"></div>
+
             <center>
                 <form action="" method="POST" id="form_id">
                     <?php
