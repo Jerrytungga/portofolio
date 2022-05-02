@@ -79,17 +79,13 @@ include 'head.php';
 
         <?php
         include 'footer.php';
-        date_default_timezone_set('Asia/Jakarta');
-        $waktu_sekarang = date('H:i:s');
         if (isset($berhasil)) { ?>
-
             <script>
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
                     title: '<?php echo $berhasil; ?>',
                     text: 'Pesan <?= $_POST['name']; ?> telah terkirim.',
-                    text: '<?= $waktu_sekarang; ?>',
                     showConfirmButton: true
                     // timer: 1500
                 })
