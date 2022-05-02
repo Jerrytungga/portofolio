@@ -10,7 +10,7 @@ if (isset($_POST['send'])) {
     $headers = "From: " . $email;
     $text = " Hai Jerry Christian, Anda mendapatkan pesan email dari " . $name . ".\n\n" . $pesan;
     if (mail($mailto, $subject, $text, $headers)) {
-        $berhasil = $_SESSION['sukses'] = 'Pesen <?=$name; ?> berhasil dikirim';
+        $berhasil = $_SESSION['sukses'] = 'Terimakasih';
     }
 }
 ?>
@@ -87,8 +87,8 @@ include 'head.php';
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    // title: '<h3>Terimakasih <br> Pesan <?= $_POST['name']; ?> telah terkirim <br></h3><?= $waktu_sekarang; ?>',
-                    text: '<?php echo $berhasil; ?>',
+                    title: '<?php echo $berhasil; ?>',
+                    text: '<h3>Pesan <?= $_POST['name']; ?> telah terkirim <br></h3><?= $waktu_sekarang; ?>',
                     showConfirmButton: true
                     // timer: 1500
                 })
