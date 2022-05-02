@@ -4,7 +4,7 @@ if (isset($_POST['send'])) {
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $pesan = $_POST['message'];
-    $mailto = "From: jerrychristian@flats.id";
+    $mailto = "From: kidungid2020@gmail.com";
     if (mail($name, $email, $subject, $pesan, $mailto)) {
         echo '<script>alert("Username atau passwors anda salah!")</script>';
     }
