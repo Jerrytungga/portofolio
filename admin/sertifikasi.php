@@ -40,8 +40,6 @@ $tb_sertifikasi = mysqli_query($conn, "SELECT * FROM `tb_sertifikasi` ");
 </head>
 
 <body>
-  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-  <div class="elfsight-app-7964101c-18ea-4d43-8869-e4f4164300e9"></div>
   <main>
     <div class="container py-4">
       <?php
