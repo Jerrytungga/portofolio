@@ -32,7 +32,7 @@ include 'head.php';
 
             <div class="mt-large">
 
-                <form action="#" method="post">
+                <form action="" method="post">
                     <div class="form__row">
                         <div class="form__field">
                             <label for="name" class="form__label">
