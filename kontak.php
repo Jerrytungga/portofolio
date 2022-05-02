@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_POST['send'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -9,7 +10,7 @@ if (isset($_POST['send'])) {
     $headers = "From: " . $email;
     $text = " Hai Jerry Christian, Anda mendapatkan pesan email dari " . $name . ".\n\n" . $pesan;
     if (mail($mailto, $subject, $text, $headers)) {
-        echo '<script type="text/javascript">alert("test")</script>';
+        $berhasil = $_SESSION['sukses'] = 'Pesen <?=$name; ?> berhasil dikirim';
     }
 }
 ?>
@@ -80,18 +81,22 @@ include 'head.php';
         include 'footer.php';
         date_default_timezone_set('Asia/Jakarta');
         $waktu_sekarang = date('H:i:s');
+        if (isset($berhasil)) { ?>
+
+            <script>
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    // title: '<h3>Terimakasih <br> Pesan <?= $_POST['name']; ?> telah terkirim <br></h3><?= $waktu_sekarang; ?>',
+                    text: '<?php echo $berhasil; ?>',
+                    showConfirmButton: true
+                    // timer: 1500
+                })
+            </script>
+        <?php  }
         ?>
     </div>
 
-    <!-- <script>
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: '<h3>Terimakasih <br> Pesan <?= $_POST['name']; ?> telah terkirim <br></h3><?= $waktu_sekarang; ?>',
-            showConfirmButton: true
-            // timer: 1500
-        })
-    </script> -->
 </body>
 
 </html>
