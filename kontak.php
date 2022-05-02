@@ -8,11 +8,9 @@ if (isset($_POST['send'])) {
     $mailto = "jerrychristiangedeontungga41@gmail.com";
     $headers = "From: " . $email;
     $text = " Hai Jerry Christian, Anda mendapatkan pesan email dari " . $name . ".\n\n" . $pesan;
-    if (mail($mailto, $subject, $text, $headers)) { ?>
-        <div class="alert alert-success text-center">
-            <?php echo "Your mail successfully sent to $recipient" ?>
-        </div>
-<?php  }
+    if (mail($mailto, $subject, $text, $headers)) {
+        echo '<script type="text/javascript">alert("test")</script>';
+    }
 }
 ?>
 
