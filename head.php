@@ -51,6 +51,36 @@
 
         }
 
+        .kolom {
+            width: 150px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: #069A8E;
+            color: #F1F8FA;
+            font-weight: bold;
+        }
+
+        .kolom:hover {
+            color: #000;
+            background-color: #F1F8FA;
+            border-color: #069A8E;
+        }
+
+        .kolom2 {
+            width: 150px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: #205375;
+            color: #F1F8FA;
+            font-weight: bold;
+        }
+
+        .kolom2:hover {
+            color: #000;
+            background-color: #F1F8FA;
+            border-color: #205375;
+        }
+
         @media screen and (max-width: 576px) {
             .mobile {
                 width: 320px;
@@ -67,6 +97,21 @@
             .mobile:hover {
                 color: #000;
 
+            }
+
+            .kolom2 {
+                width: 100px;
+                border-radius: 20px;
+                text-align: center;
+                background-color: #205375;
+                color: #F1F8FA;
+                font-weight: bold;
+            }
+
+            .kolom2:hover {
+                color: #000;
+                background-color: #F1F8FA;
+                border-color: #205375;
             }
 
             .gambar {

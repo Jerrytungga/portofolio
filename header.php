@@ -24,7 +24,7 @@
        <a class="menu__item " href="kontak.php">
          Kontak
        </a>
-       <a href="login.php" type="button" class="menu__item btn btn-light text-black shadow mt-3">Login</a>
+       <a href="login.php" type="button" class="btn kolom2  shadow mt-3">Login</a>
      </nav>
    </div>
  </header>
