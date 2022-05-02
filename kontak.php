@@ -1,3 +1,17 @@
+<?php
+if (isset($_POST['send'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $pesan = $_POST['message'];
+    $mailto = "From: jerrychristian@flats.id";
+    if (mail($name, $email, $subject, $pesan, $mailto)) {
+        echo '<script>alert("Username atau passwors anda salah!")</script>';
+    }
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 <?php
@@ -18,7 +32,7 @@ include 'head.php';
 
             <div class="mt-large">
 
-                <form action="email.php" method="post">
+                <form action="#" method="post">
                     <div class="form__row">
                         <div class="form__field">
                             <label for="name" class="form__label">
@@ -55,15 +69,27 @@ include 'head.php';
 
 
 
-                    <button type="submit" name="sent" class="btn btn-dark">Kirim Pesan</button>
+                    <button type="submit" name="send" class="btn btn-dark">Kirim Pesan</button>
                 </form>
             </div>
         </section>
 
         <?php
         include 'footer.php';
+        date_default_timezone_set('Asia/Jakarta');
+        $waktu_sekarang = date('H:i:s');
         ?>
     </div>
+
+    <!-- <script>
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '<h3>Terimakasih <br> Pesan <?= $_POST['name']; ?> telah terkirim <br></h3><?= $waktu_sekarang; ?>',
+            showConfirmButton: true
+            // timer: 1500
+        })
+    </script> -->
 </body>
 
 </html>
