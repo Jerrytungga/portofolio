@@ -11,48 +11,53 @@ include 'head.php';
 ?>
 
 <body>
-    <div class="wrap">
-        <?php
-        include 'header.php';
-        ?>
 
-        <section>
-            <div class="page">
-                <div class="txt-center wysiwyg">
-                    <h1>
-                        <?= $sqli_aplikasi['Judul']; ?>
-                    </h1>
-                    <p class="txt-large">
-                        <?= $sqli_aplikasi['keterangan']; ?>
-                    </p>
-                </div>
+    <div class="background">
+        <main class="wrap">
+            <div class="bg-light shadow p-5 rounded">
+                <?php
+                include 'header.php';
+                ?>
+
+                <section>
+                    <div class="page">
+                        <div class="txt-center wysiwyg">
+                            <h1>
+                                <?= $sqli_aplikasi['Judul']; ?>
+                            </h1>
+                            <p class="txt-large">
+                                <?= $sqli_aplikasi['keterangan']; ?>
+                            </p>
+                        </div>
 
 
-                <div class="mt-large">
-                    <figure class="feature-media">
-                        <img src="admin/images/proyek/<?= $sqli_aplikasi['gambar']; ?>" class="gambar">
-                    </figure>
-                </div>
+                        <div class="mt-large">
+                            <figure class="feature-media">
+                                <img src="admin/images/proyek/<?= $sqli_aplikasi['gambar']; ?>" class="gambar">
+                            </figure>
+                        </div>
 
-                <div class="mt-large wysiwyg">
-                    <h2>Singkat</h2>
-                    <p><?= $sqli_aplikasi['Keterangan_Singkat']; ?></p>
+                        <div class="mt-large wysiwyg">
+                            <h2>Singkat</h2>
+                            <p><?= $sqli_aplikasi['Keterangan_Singkat']; ?></p>
 
-                    <h2>Hasil</h2>
-                    <p><?= $sqli_aplikasi['keterangan_Hasil']; ?></p>
+                            <h2>Hasil</h2>
+                            <p><?= $sqli_aplikasi['keterangan_Hasil']; ?></p>
 
-                </div>
+                        </div>
 
-                <div class="mt-large txt-center">
-                    <a class="btn btn--large btn-dark" href="<?= $sqli_aplikasi['link']; ?>" target="_blank">
-                        Lihat Website
-                    </a>
-                </div>
+                        <div class="mt-large txt-center">
+                            <a class="btn btn--large btn-dark" href="<?= $sqli_aplikasi['link']; ?>" target="_blank">
+                                Lihat Website
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <?php
+                include 'footer.php';
+                ?>
             </div>
-        </section>
-        <?php
-        include 'footer.php';
-        ?>
+        </main>
     </div>
 </body>
 

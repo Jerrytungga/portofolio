@@ -23,26 +23,22 @@
     </head>
 
     <style>
-        .wrap1 {
+        .background {
             position: absolute;
             top: 0;
             z-index: -1;
             width: 100%;
+            margin: 0px;
             height: 222px;
             content: "";
-            background-color: #5463FF;
+            background-color: #0AA1DD;
         }
 
-        .wrap {
-            background-color: #F7F7F7;
-            border-radius: 10px;
-            margin-top: 100px;
-            margin-bottom: 50px;
 
-        }
 
         body {
             background-color: #ECECEC;
+            margin-bottom: 100px;
         }
 
         .img-fluid {
@@ -123,35 +119,26 @@
 
         @media screen and (max-width: 576px) {
             .mobile {
-                width: 320px;
-                line-height: 1.3;
-                font-size: large;
+                width: auto;
+                font-size: 14pt;
+                text-align: center;
                 color: #000;
                 text-transform: uppercase;
-                font-size: 24px;
-                text-align: center;
-                margin-left: 65px;
-
+                margin-left: 50px;
             }
 
-            .wrap1 {
+            .background {
                 position: absolute;
                 top: 0;
                 z-index: -1;
                 width: 100%;
+                margin: 0px;
                 height: 222px;
                 content: "";
-                background-color: #5463FF;
-                margin: auto;
+                background-color: #0AA1DD;
             }
 
-            .wrap {
-                background-color: #F7F7F7;
-                border-radius: 10px;
-                margin-top: 100px;
-                margin-bottom: 50px;
 
-            }
 
             .mobile:hover {
                 color: #000;
@@ -160,11 +147,11 @@
 
             .kolom2 {
                 width: 100px;
-                border-radius: 20px;
+                border-radius: 5px;
                 text-align: center;
-                background-color: #205375;
                 color: #F1F8FA;
-                font-weight: bold;
+                font-size: 12pt;
+                margin: 0;
             }
 
             .kolom2:hover {
@@ -189,13 +176,14 @@
                 padding: 3px;
             }
 
-
-
             .logo__text {
                 font-size: 1.5rem;
             }
 
-
+            .menu__item {
+                text-align: center;
+                font-size: 10pt;
+            }
 
 
         }

@@ -24,8 +24,9 @@
        <a class="menu__item " href="kontak.php">
          Kontak
        </a>
-       <a href="login.php" type="button" class="btn kolom2  shadow mt-3">Login</a>
+       <a href="login.php" type="button" class="btn kolom2 menu__item mt-3">Login</a>
      </nav>
    </div>
-
+   <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+   <div class="elfsight-app-304a1211-7b9b-4250-938c-edf176107684"></div> -->
  </header>
