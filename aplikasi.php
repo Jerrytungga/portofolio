@@ -55,8 +55,8 @@ include 'head.php';
                                 <div>
                                     <?php
                                     $ambil_ulasan = $_GET['ulasan'];
-                                    $ulasan = mysqli_fetch_array(mysqli_query($conn, "SELECT Keterangan_Singkat FROM aplikasi WHERE id_aplikasi='$ambil_ulasan'"));
-                                    if ($ambil_ulasan > 0) { ?>
+                                    $ulasan = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM aplikasi WHERE id_aplikasi='$ambil_ulasan'"));
+                                    if ($query['id_aplikasi'] == $ulasan['id_aplikasi']) { ?>
                                         <div class="judul_ulasan">Ulasan</div>
                                         <div class="deskripsi">
                                             <?= $ulasan['Keterangan_Singkat']; ?>
