@@ -145,21 +145,6 @@
             border-color: #069A8E;
         }
 
-        .kolom2 {
-            width: 150px;
-            border-radius: 20px;
-            text-align: center;
-            background-color: #205375;
-            color: #F1F8FA;
-            font-weight: bold;
-        }
-
-        .kolom2:hover {
-            color: #000;
-            background-color: #F1F8FA;
-            border-color: #205375;
-        }
-
         @media screen and (max-width: 576px) {
             .mobile {
                 width: auto;
@@ -188,20 +173,6 @@
 
             }
 
-            .kolom2 {
-                width: 100px;
-                border-radius: 5px;
-                text-align: center;
-                color: #F1F8FA;
-                font-size: 8pt;
-                margin-left: 70px;
-            }
-
-            .kolom2:hover {
-                color: #000;
-                background-color: #F1F8FA;
-                border-color: #205375;
-            }
 
             .kolom {
                 width: 150px;
@@ -225,8 +196,8 @@
             }
 
             .menu__item {
-                text-align: center;
-                font-size: 9pt;
+                text-align: justify;
+                font-size: 10pt;
 
             }
 
@@ -244,7 +215,7 @@
 
             .deskripsi {
                 font-size: 13pt;
-                width: 240px;
+                width: 260px;
                 text-align: justify;
             }
 
