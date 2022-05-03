@@ -23,6 +23,28 @@
     </head>
 
     <style>
+        .wrap1 {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 222px;
+            content: "";
+            background-color: #5463FF;
+        }
+
+        .wrap {
+            background-color: #F7F7F7;
+            border-radius: 10px;
+            margin-top: 100px;
+            margin-bottom: 50px;
+
+        }
+
+        body {
+            background-color: #ECECEC;
+        }
+
         .img-fluid {
             height: 299.422px;
         }
@@ -62,6 +84,11 @@
         .mobile:hover {
             color: #000;
 
+        }
+
+        .gambar {
+            background-color: #0AA1DD;
+            padding: 3px;
         }
 
         .kolom {
@@ -107,6 +134,25 @@
 
             }
 
+            .wrap1 {
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                width: 100%;
+                height: 222px;
+                content: "";
+                background-color: #5463FF;
+                margin: auto;
+            }
+
+            .wrap {
+                background-color: #F7F7F7;
+                border-radius: 10px;
+                margin-top: 100px;
+                margin-bottom: 50px;
+
+            }
+
             .mobile:hover {
                 color: #000;
 
@@ -137,10 +183,10 @@
             }
 
             .gambar {
-                display: block;
                 margin-left: auto;
                 margin-right: auto;
-                box-shadow: #000;
+                background-color: #069A8E;
+                padding: 3px;
             }
 
 
