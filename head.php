@@ -34,7 +34,49 @@
             background-color: #0AA1DD;
         }
 
+        .date {
+            font-size: 13pt;
+            font-style: italic;
+            line-height: 2;
+            /* margin-left: 20px; */
+        }
 
+        .judul {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 30pt;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .hidden_ulasan {
+            color: red;
+            font-size: 10pt;
+        }
+
+        .hidden_ulasan:hover {
+            color: red;
+        }
+
+        .deskripsi {
+            font-size: large;
+            margin-top: 10px;
+            text-align: justify;
+            line-height: 1.5;
+            width: 540px;
+            letter-spacing: 1px;
+        }
+
+        .judul_ulasan {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20pt;
+            font-weight: 700;
+            color: #F8B400;
+        }
+
+        .ulasan {
+            background-color: #F8B400;
+            color: #000;
+        }
 
         body {
             background-color: #ECECEC;
@@ -135,7 +177,7 @@
                 margin: 0px;
                 height: 222px;
                 content: "";
-                background-color: #0AA1DD;
+                background-color: #069A8E;
             }
 
 
@@ -185,6 +227,31 @@
                 font-size: 10pt;
             }
 
+            .mb-tiny {
+                font-size: 20pt;
+            }
 
+            .date {
+                font-size: 10pt;
+            }
+
+            .judul {
+                font-size: 20pt;
+            }
+
+            .deskripsi {
+                font-size: 13pt;
+                width: 220px;
+                text-align: left;
+            }
+
+            .ulasan {
+                width: 100px;
+                font-size: 8pt;
+            }
+
+            .judul_ulasan {
+                font-size: 20pt;
+            }
         }
     </style>

@@ -1,5 +1,6 @@
 <?php
 include 'database.php';
+error_reporting(E_ALL ^ E_NOTICE);
 $sqli_aplikasi = mysqli_query($conn, "Select * from aplikasi order by id_aplikasi DESC ");
 
 ?>
@@ -29,33 +30,52 @@ include 'head.php';
                 <?php
                 while ($query = mysqli_fetch_array($sqli_aplikasi)) {
                 ?>
-                    <section class="page-wide">
-                        <div class="project-preview">
-                            <figure class="project-preview__media">
-                                <a>
-                                    <img src="admin/images/proyek/<?= $query['gambar']; ?>">
-                                </a>
-                            </figure>
-
-                            <div class="project-preview__content">
-                                <h2 class="project-preview__title">
-                                    <a>
-                                        <?= $query['Judul']; ?>
-                                    </a>
-                                </h2>
-
-                                <p class="project-preview__desc">
-                                    <?= $query['keterangan']; ?>
-                                </p>
-
-                                <div class="project-preview__action">
-                                    <a href="view_detail.php?id=<?= $query['id_aplikasi']; ?>" class="btn bg-dark text-light hov-pointer">
-                                        Lihat Selengkapnya
-                                    </a>
+                    <section>
+                        <div>
+                            <div>
+                                <div class="date">
+                                    <?= $query['date']; ?>
                                 </div>
+
+                                <form>
+                                    <div class="judul">
+                                        <a href="view_detail.php?id=<?= $query['id_aplikasi']; ?>" class="judul">
+                                            <?= $query['Judul']; ?>
+                                        </a>
+                                        <button name="ulasan" value="<?= $query['id_aplikasi']; ?>" class="btn ulasan">Lihat Ulasan</button>
+                                    </div>
+                                </form>
+
+
+                                <div class="deskripsi">
+                                    <?= $query['keterangan']; ?>
+                                </div><br>
+
+
+                                <div>
+                                    <?php
+                                    $ambil_ulasan = $_GET['ulasan'];
+                                    $ulasan = mysqli_fetch_array(mysqli_query($conn, "SELECT Keterangan_Singkat FROM aplikasi WHERE id_aplikasi='$ambil_ulasan'"));
+                                    if ($ambil_ulasan > 0) { ?>
+                                        <div class="judul_ulasan">Ulasan</div>
+                                        <div class="deskripsi">
+                                            <?= $ulasan['Keterangan_Singkat']; ?>
+                                        </div><br>
+                                        <a href="aplikasi.php" class="hidden_ulasan">Sembunyikan</a>
+                                    <?php }
+                                    ?>
+
+                                </div>
+
                             </div>
                         </div>
                     </section>
+
+
+
+
+
+
 
 
                     <style type="text/css">
