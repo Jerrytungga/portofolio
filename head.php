@@ -74,8 +74,9 @@
         }
 
         .ulasan {
-            background-color: #F8B400;
+            border-color: #F8B400;
             color: #000;
+            background-color: #F7F7F7;
         }
 
         body {
@@ -192,8 +193,8 @@
                 border-radius: 5px;
                 text-align: center;
                 color: #F1F8FA;
-                font-size: 12pt;
-                margin: 0;
+                font-size: 8pt;
+                margin-left: 70px;
             }
 
             .kolom2:hover {
@@ -209,6 +210,7 @@
                 background-color: #069A8E;
                 color: #F1F8FA;
                 font-weight: bold;
+
             }
 
             .gambar {
@@ -224,7 +226,8 @@
 
             .menu__item {
                 text-align: center;
-                font-size: 10pt;
+                font-size: 9pt;
+
             }
 
             .mb-tiny {
@@ -241,13 +244,16 @@
 
             .deskripsi {
                 font-size: 13pt;
-                width: 220px;
-                text-align: left;
+                width: 240px;
+                text-align: justify;
             }
 
             .ulasan {
                 width: 100px;
                 font-size: 8pt;
+                border-color: #F8B400;
+                color: #000;
+                background-color: #F7F7F7;
             }
 
             .judul_ulasan {

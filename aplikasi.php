@@ -42,7 +42,7 @@ include 'head.php';
                                         <a href="view_detail.php?id=<?= $query['id_aplikasi']; ?>" class="judul">
                                             <?= $query['Judul']; ?>
                                         </a>
-                                        <button name="ulasan" value="<?= $query['id_aplikasi']; ?>" class="btn ulasan">Lihat Ulasan</button>
+                                        <button name="ulasan" value="<?= $query['id_aplikasi']; ?>" class="btn ulasan shadow">Lihat Ulasan</button>
                                     </div>
                                 </form>
 
