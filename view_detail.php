@@ -19,7 +19,7 @@ include 'head.php';
                 include 'header.php';
                 ?>
 
-                <section>
+                <!-- <section>
                     <div class="page">
                         <div class="txt-center wysiwyg">
                             <h1>
@@ -50,6 +50,31 @@ include 'head.php';
                             <a class="btn btn--large btn-dark" href="<?= $sqli_aplikasi['link']; ?>" target="_blank">
                                 Lihat Website
                             </a>
+                        </div>
+                    </div>
+                </section> -->
+
+                <section>
+                    <div>
+                        <div class="detail-proyek">
+                            <p class="judul"><?= $sqli_aplikasi['Judul']; ?></p>
+                            <div class="deskripsi">
+                                <?= $sqli_aplikasi['keterangan']; ?>
+                            </div><br>
+                            <button class="btn btn-success shadow">Lihat Gambar</button>
+                            <button class="btn btn-dark shadow">Lihat Website</button>
+                        </div>
+                        <div>
+                            <div class="judul mt-2">Ulasan</div>
+                            <div class="deskripsi">
+                                <?= $sqli_aplikasi['Keterangan_Singkat']; ?>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="judul mt-2">Waktu Pembuatan</div>
+                            <div class="deskripsi">
+                                <?= $sqli_aplikasi['Keterangan_Singkat']; ?>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -62,7 +62,7 @@
             margin-top: 10px;
             text-align: justify;
             line-height: 1.5;
-            width: 540px;
+            width: 100%;
             letter-spacing: 1px;
         }
 

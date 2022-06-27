@@ -21,6 +21,12 @@
        <a class="menu__item " href="artikel.php">
          Artikel
        </a>
+       <a class="menu__item " href="#">
+         Training
+       </a>
+       <a class="menu__item " href="#">
+         Profile
+       </a>
        <a class="menu__item " href="kontak.php">
          Kontak
        </a>
