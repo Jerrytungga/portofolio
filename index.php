@@ -7,6 +7,8 @@ include 'head.php';
 ?>
 
 
+
+
 <body>
     <div class="background">
         <main class="wrap">
